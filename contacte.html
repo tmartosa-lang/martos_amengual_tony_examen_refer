@@ -40,6 +40,31 @@
                 <td>16 a 20</td>
             </tr>
         </table>
+        <h2>Escriu-nos</h2>
+        <form action="contacte.php" method="post">
+            <p>
+                <label for="nom">Nom</label>
+                <input type="text" id="nom" name="nom" required>
+            </p>
+            <p>
+                <label for="correu">Correu</label>
+                <input type="email" id="correu" name="correu" required>
+            </p>
+            <p>Tipus de bici</p>
+            <p>
+                <input type="radio" id="carretera" name="bici" value="carretera">
+                <label for="carretera">Carretera</label>
+                <input type="radio" id="muntanya" name="bici" value="muntanya">
+                <label for="muntanya">Muntanya</label>
+                <input type="radio" id="urbana" name="bici" value="urbana">
+                <label for="urbana">Urbana</label>
+            </p>
+            <p>
+                <label for="missatge">Missatge</label>
+                <textarea id="missatge" name="missatge"></textarea>
+            </p>
+            <button type="submit">Envia</button>
+        </form>
     </main>
     <footer>
 
