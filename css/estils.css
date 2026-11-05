@@ -32,3 +32,34 @@ header {
 
 h1 { font-size: 3.2rem; } /* 32px */
 h2 { font-size: 2.4rem; } /* 24px */
+
+nav a {
+color: white;
+text-decoration: none;
+}
+
+article {
+width: 400px;
+padding: 20px;
+border: 1px solid black;
+margin-bottom: 20px;
+position: relative;
+}
+
+.nou {
+position: absolute; /* el fill */
+bottom: 15px;
+left: 15px;
+}
+
+.nou {
+padding: 4px 10px;
+background-color: #2e7d32;
+color: white;
+text-transform: uppercase;
+border-radius: 6px;
+}
+
+img {
+    width: 100%;
+}
