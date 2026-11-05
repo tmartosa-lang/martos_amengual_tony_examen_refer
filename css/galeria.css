@@ -1,0 +1,63 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+figure {
+  margin: 0 0 16px;
+  background: #fff;
+  border: 1px solid #c8c3c3;
+}
+
+figure img {
+  width: 100%;
+  display: block;
+}
+
+figcaption {
+  padding: 8px;
+}
+
+header,
+.km {
+  display: none;
+}   
+
+@media screen and (min-width: 576px) {
+    figure {
+        display: inline-block;
+        width: 48%;
+        vertical-align: top;
+        margin-right: 4%;
+    }
+
+    figure:nth-child(2n) {
+        margin-right: 0;
+    }
+}
+
+@media screen and (min-width: 768px) {
+  .km {
+    display: inline;
+  }
+
+  header p {
+    display: block;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  figure {
+    width: 32%;
+    margin-right: 2%;
+  }
+
+  figure:nth-child(3n) {
+    margin-right: 0;
+  }
+}
