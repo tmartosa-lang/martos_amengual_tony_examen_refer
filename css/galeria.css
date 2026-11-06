@@ -31,9 +31,9 @@ header,
 @media screen and (min-width: 576px) {
     figure {
         display: inline-block;
-        width: 48%;
+        width: 33%;
         vertical-align: top;
-        margin-right: 4%;
+        margin: 0 0 16px;
     }
 
     figure:nth-child(2n) {

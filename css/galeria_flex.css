@@ -1,0 +1,72 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+figure {
+  margin: 0;
+  background: #fff;
+  border: 1px solid #c8c3c3;
+}
+
+figure img {
+  width: 100%;
+  display: block;
+}
+
+figcaption {
+  padding: 8px;
+  display: flex;
+  justify-content: space-between;
+}
+
+header,
+.km {
+  display: none;
+  color: #6b6459;
+}   
+
+.banner{
+    margin: 0;
+}
+
+.galeria{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+
+@media screen and (min-width: 576px) {
+    figure {
+        display: inline-block;
+        width: 33%;
+        vertical-align: top;
+        margin: 0 0 16px;
+    }
+
+    figure:nth-child(2n) {
+        margin-right: 0;
+    }
+}
+
+@media screen and (min-width: 768px) {
+  .km {
+    display: inline;
+  }
+
+  header p {
+    display: block;
+  }
+}
+
+@media screen and (min-width: 992px) {
+    .galeria figure {
+        width: 32%;
+    }
+  }
