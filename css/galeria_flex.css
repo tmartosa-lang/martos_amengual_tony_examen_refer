@@ -37,8 +37,8 @@ header,
 
 .galeria{
     display: flex;
-    flex-wrap: wrap;
-    gap: 16px;
+    flex-wrap: wrap;    /* si no hi caben, a la fila seguent */
+    gap: 16px;    /* l'espai entre fotos: fora marges */
 }
 
 
