@@ -52,9 +52,9 @@ h1 {
 }
 
 .productes {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
     gap: 20px;
+    grid-template-columns: 1fr;
 }
 
 .producte {
@@ -64,7 +64,6 @@ h1 {
     border-radius: 8px;
     display: flex;
     flex-direction: column;
-    width: 100%;
 }
 
 .producte img {
@@ -112,27 +111,20 @@ h1 {
     font-weight: bold;
 }
 
-/* A partir de 576 px: 2 per fila (1 forat) */
 @media (min-width: 576px) {
-    .producte {
-        width: calc((100% - 20px) / 2);
-    }
+.productes {
+width: calc((100% - 20px) / 2);
+}
 }
 
 @media (min-width: 768px) {
-    .producte {
-        width: calc((100% - 40px) / 3);
-    }
+.productes {
+width: calc((100% - 40px) / 3);
+}
 }
 
 @media (min-width: 992px) {
-    .producte {
-        width: calc((100% - 60px) / 4);
-    }
+.productes {
+width: calc((100% - 60px) / 4);
 }
-
-@media (min-width: 1200px) {
-    .producte {
-        width: calc((100% - 80px) / 5);
-    }
 }

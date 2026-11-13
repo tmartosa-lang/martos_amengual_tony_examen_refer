@@ -1,0 +1,7 @@
+EXERCICI E3 · ON ÉS LA MIDA?
+a) A flex.css , les media queries canvien la .producte . A grid.css , la .productes . Per què?
+Resposta: Perque producte es refereix a canvis en les imatges més individualment,
+i a productes es més generalitzat.
+b) Per què 12 productes va tan bé per a 1, 2, 3 i 4 per fila? Què passaria amb 5 per fila?
+Resposta: Perque les mides 576px, 768px i 992px van bé amb aquestes columnes,
+si fosin 5 per fila hauriem d'afegir alguna altra mida.
