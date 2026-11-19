@@ -1,0 +1,118 @@
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+:root {
+    --fosc: #1f2a36;
+    --blau: #2b4c7e;
+    --groc: #f4d35e;
+    --fons: #eef1f5;
+}
+
+body {
+    margin: 0;
+    font-size: 1.6rem;
+    line-height: 1.5;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--fons);
+    color: var(--fosc);
+}
+
+h1,
+h2,
+h3,
+p {
+    margin: 0 0 8px;
+}
+
+.capçelera {
+    background-color: var(--blau);
+    color: white;
+}
+
+.menu {
+    background-color: var(--fosc);
+}
+
+.contingut {
+    background-color: white;
+}
+
+.lateral {
+    background-color: var(--groc);
+}
+
+.peu {
+    background-color: var(--fosc);
+    color: white;
+}
+
+.pagina > *{/*ELEMENTS DE FILLS DIRECTE*/
+    padding: 16px;
+    border-radius: 6px;
+}
+
+.pagina {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 16px;
+    display: grid;
+    gap: 16px;
+}
+
+.menu ul{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 8px 16px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+}
+
+.menu a {
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+/*DEFINIM EL MAPA*/
+
+.capçelera{grid-area: cap;}
+.menu{grid-area: menu;}
+.contingut{grid-area: contingut;}
+.lateral{grid-area: lateral;}
+.peu{grid-area: peu;}
+
+.pagina{
+    grid-template-areas:
+    "cap"
+    "menu"
+    "contingut"
+    "lateral"
+    "peu";
+}
+
+
+@media (min-width: 768px){
+    .pagina{
+        grid-template-columns: 2fr 1fr;
+        grid-template-areas:
+        "cap cap"
+        "menu menu"
+        "contingut lateral"
+        "peu peu"
+        
+        
+        ;
+    }
+    
+}
