@@ -1,0 +1,167 @@
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+:root {
+    --fosc: #1f2a36;
+    --blau: #2b4c7e;
+    --groc: #f4d35e;
+    --verd: #9ccc65;
+    --blau-clar: #d0e8f2;
+    --taronja: #ef8d32;
+    --fons: #eef1f5;
+}
+
+body {
+    margin: 0;
+    font-size: 1.6rem;
+    line-height: 1.5;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--fons);
+    color: var(--fosc);
+}
+
+h1,
+h2,
+h3,
+p {
+    margin: 0;
+}
+
+/* CONTENIDOR GENERAL: Una sola columna a totes les amplades (sense mapa) */
+.pagina {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+/* CAPÇALERA: Logo i menú un a cada punta, també al mòbil */
+.capcalera {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 8px;
+}
+
+.logo {
+    background-color: var(--blau);
+    color: white;
+    padding: 16px;
+    border-radius: 6px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.menu {
+    background-color: var(--fosc);
+    padding: 16px;
+    border-radius: 6px;
+}
+
+.menu ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 8px 12px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.4rem;
+}
+
+/* CONTINGUT PRINCIPAL */
+.contingut {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+/* 1. Títol gran (bloc verd) */
+.titol-gran {
+    background-color: var(--verd);
+    min-height: 140px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 6px;
+}
+
+.titol-gran h1 {
+    font-size: 2rem;
+}
+
+/* 2. Zona de serveis: Grid d'1 columna al mòbil */
+.serveis {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 8px;
+}
+
+.servei {
+    background-color: var(--blau-clar);
+    min-height: 90px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 6px;
+    font-weight: bold;
+}
+
+/* 3. Crida a l'acció (bloc taronja) */
+.crida-accio {
+    background-color: var(--taronja);
+    padding: 16px;
+    border-radius: 6px;
+    text-align: center;
+    font-weight: bold;
+}
+
+/* PEU */
+.peu {
+    background-color: var(--fosc);
+    color: white;
+    padding: 12px 16px;
+    border-radius: 6px;
+    text-align: center;
+}
+
+/* ORDINADOR */
+@media (min-width: 768px) {
+    .logo {
+        min-width: 240px;
+    }
+
+    .menu {
+        min-width: 340px;
+    }
+
+    .menu ul {
+        justify-content: center;
+        gap: 8px 20px;
+    }
+
+    .menu a {
+        font-size: 1.6rem;
+    }
+
+    /* Les tres targetes dels serveis van de tres en tres */
+    .serveis {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}

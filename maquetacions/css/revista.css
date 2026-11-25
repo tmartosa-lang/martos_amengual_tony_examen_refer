@@ -1,0 +1,114 @@
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+:root {
+    --fosc: #1f2a36;
+    --blau: #2b4c7e;
+    --groc: #f4d35e;
+    --verd: #9ccc65;
+    --blau-clar: #d0e8f2;
+    --taronja: #ef8d32;
+    --fons: #eef1f5;
+}
+
+.layout {
+    display: grid;
+    gap: 0.5rem;
+    font-size: 2rem;
+    /* ← texto un poco más grande */
+    grid-template-areas:
+        "capçalera"
+        "destacada"
+        "noticia1"
+        "noticia2"
+        "noticia3"
+        "noticia4"
+        "peu";
+}
+
+.capçalera,
+.destacada,
+.noticia-1,
+.noticia-2,
+.noticia-3,
+.noticia-4,
+.peu {
+    text-align: center;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    /* ← esquinas redondas */
+}
+
+.capçalera {
+    grid-area: capçalera;
+    background: var(--blau);
+    color: white;
+}
+
+.destacada {
+    grid-area: destacada;
+    background: var(--taronja);
+    color: white;
+    text-align: center;
+}
+
+.noticia-1,
+.noticia-2,
+.noticia-3,
+.noticia-4 {
+    background: var(--blau-clar);
+    color: #003333;
+}
+
+.noticia-1 {
+    grid-area: noticia1;
+}
+
+.noticia-2 {
+    grid-area: noticia2;
+}
+
+.noticia-3 {
+    grid-area: noticia3;
+}
+
+.noticia-4 {
+    grid-area: noticia4;
+}
+
+.peu {
+    grid-area: peu;
+    background: var(--fosc);
+    color: white;
+}
+
+@media (min-width: 576px) {
+    .layout {
+        grid-template-areas:
+            "capçalera capçalera"
+            "destacada destacada"
+            "noticia1 noticia2"
+            "noticia3 noticia4"
+            "peu peu";
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (min-width: 992px) {
+  .layout {
+    grid-template-areas:
+      "capçalera capçalera capçalera capçalera"
+      "destacada destacada noticia1 noticia2"
+      "destacada destacada noticia3 noticia4"
+      "peu peu peu peu";
+    grid-template-columns: repeat(4, 1fr);
+  }
+}   

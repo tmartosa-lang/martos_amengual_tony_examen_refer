@@ -1,0 +1,116 @@
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+:root {
+    --fosc: #1f2a36;
+    --blau: #2b4c7e;
+    --groc: #f4d35e;
+    --verd: #9ccc65;
+    --blau-clar: #d0e8f2;
+    --taronja: #ef8d32;
+    --fons: #eef1f5;
+}
+
+/* ── Móvil: 1 columna ── */
+.layout {
+  display: grid;
+  gap: 0.5rem;
+  font-size: 2rem;
+  grid-template-areas:
+    "capçalera"
+    "foto"
+    "npb"
+    "descripcio"
+    "relacionats"
+    "peu";
+}
+
+/* ── Estilos comunes ── */
+.capçalera,
+.foto,
+.npb,
+.descripcio,
+.relacionats,
+.peu {
+  text-align: center;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.capçalera {
+  grid-area: capçalera;
+  background: #03225b;
+  color: white;
+}
+
+.foto {
+  grid-area: foto;
+  background: #5d870b;
+  color: white;
+  min-height: 200px; /* ← altura mínima, sin imagen */
+}
+
+.npb {
+  grid-area: npb;
+  background: #fffcf9;
+  color: black;
+}
+
+.descripcio {
+  grid-area: descripcio;
+  background: #e4ad36;
+  color: #003333;
+}
+
+.relacionats {
+  grid-area: relacionats;
+  background: #f0f0f0;
+  /* ── Grid anidado: 2 columnas en móvil ── */
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.5rem;
+  padding: 0.5rem;
+}
+
+.producte {
+  background: #40e0d0;
+  color: #003333;
+  text-align: center;
+  padding: 0.75rem;
+  border-radius: 0.5rem;
+}
+
+.peu {
+  grid-area: peu;
+  background: #070720;
+  color: white;
+}
+
+/* ── Ordinator: ≥1100px ── */
+@media (min-width: 1100px) {
+  .layout {
+    grid-template-areas:
+      "capçalera capçalera"
+      "foto npb"
+      "foto descripcio"
+      "relacionats relacionats"
+      "peu peu";
+    grid-template-columns: 1fr 1fr;
+  }
+
+  /* Relacionats: 4 productos en una fila */
+  .relacionats {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}   
